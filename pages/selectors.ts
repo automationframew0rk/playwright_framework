@@ -25,4 +25,23 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    jdeSummaryAvailability: {
+    usernameInput: '#User',
+    passwordInput: '#Password',
+    signInButton: '#menuAndFastPathContainer',
+    navigatorButton: 'button:has-text("Navigator")',
+    enterpriseOneMenusLink: 'text=EnterpriseOne Menus',
+    logisticsManagementLink: 'text=Logistics Management',
+    inventoryManagementLink: 'text=Inventory Management',
+    dailyProcessingLink: 'text=Daily Processing',
+    inventoryInquiriesLink: 'text=Inventory Inquiries',
+    summaryAvailabilityLink: 'text=Application: P41202, Form: W41202A, Version: ZJDE0001',
+    frameLocator: '#e1menuAppIframe',
+    itemNumberInput: '[name="0_17"]',
+    branchPlantInput: '#C0_7',
+    displayOptionsDropdown: 'text=function jdeTabRegisterFunction0_281(){\nvar jdeTabPages0_281',
+    displayOptionItem: (option: string) => `option:has-text("${option}")`,
+    findIcon: '#hc_Find',
+    onHandCell: '#jdeGridBack0_319 td[colindex="4"]'
+  },
 };
