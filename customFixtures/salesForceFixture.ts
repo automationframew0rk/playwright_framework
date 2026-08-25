@@ -3,12 +3,14 @@ import { SalesforceAccountPage } from '../pages/salesforceAccountPage';
 import { SalesforceHomePage } from '../pages/salesforceHomePage';
 import { SalesforceLoginPage } from '../pages/salesforceLogin';
 import { JdeSummaryAvailabilityPage } from '../pages/jdeSummaryAvailabilityPage';
+import { JdePrintPickSlipPage } from '../pages/jdePrintPickSlipPage';
 
 type SalesforceFixtures = {
     SalesforceLogin: SalesforceLoginPage;
     SalesforceHome: SalesforceHomePage;
     SalesforceAccount: SalesforceAccountPage;
     JdeSummaryAvailability: JdeSummaryAvailabilityPage;
+    JdePrintPickSlip: JdePrintPickSlipPage;
 };
 
 export const test = baseTest.extend<SalesforceFixtures>({
@@ -26,5 +28,9 @@ export const test = baseTest.extend<SalesforceFixtures>({
 
     JdeSummaryAvailability: async ({ page, context }, use) => {
         await use(new JdeSummaryAvailabilityPage(page, context));
+    },
+
+    JdePrintPickSlip: async ({ page, context }, use) => {
+        await use(new JdePrintPickSlipPage(page, context));
     },
 });
