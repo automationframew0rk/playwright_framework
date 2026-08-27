@@ -25,4 +25,13 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    lead: {
+      newBtn: "//button[@title='New']",
+      salutationDropdown: "//select[@name='salutation']",
+      firstNameInput: "//input[@name='firstName']",
+      lastNameInput: "//input[@name='lastName']",
+      companyInput: "//input[@name='Company']",
+      saveBtn: "//button[@title='Save']",
+      verificationText: "//span[contains(text(),'Mr. John Doe') or contains(text(),'Mr.') and contains(text(),'John') and contains(text(),'Doe')]"
+    },
 };

@@ -1,32 +1,35 @@
 import { test } from '../customFixtures/salesForceFixture';
+
+// Using URLConstants.adminURL for login URL
 import { URLConstants } from '../constants/urlConstants';
-import { credentials } from '../constants/credentialData';
-import { selectors } from '../pages/selectors';
 
 test('Create a new Lead', async ({ SalesforceLogin, SalesforceHome, SalesforceLead }) => {
     test.info().annotations.push(
         { type: 'Author', description: 'udai' },
-        { type: 'TestCase', description: 'TC017' },
-        { type: 'Test Description', description: 'Creates a new Lead with specified details' },
+        { type: 'TestCase', description: 'Create a new Lead' },
+        { type: 'Test Description', description: 'Creates a new lead with given details and verifies it' },
         { type: 'Category', description: 'Lead Management' }
     );
 
     await SalesforceLogin.loadApp(URLConstants.adminURL);
-    await SalesforceLogin.type(selectors.login.usernameInput, 'Username', credentials.ADMINLOGIN.username);
-    await SalesforceLogin.click(selectors.login.loginBtn, 'Log In', 'Button');
-    await SalesforceLogin.type(selectors.login.passwordInput, 'Password', credentials.ADMINLOGIN.password);
-    await SalesforceLogin.click(selectors.login.loginBtn, 'Log In', 'Button');
+    await SalesforceLogin.salesforceLogin('ADMINLOGIN');
 
     await SalesforceHome.appLauncher();
     await SalesforceHome.searchApp('Leads');
     await SalesforceHome.clickApp('Leads');
 
+    const salutation = 'Mr.';
+    const firstName = 'John';
+    const lastName = 'Doe';
+    const company = 'Acme Corp';
+    const fullName = `${salutation} ${firstName} ${lastName}`;
+
     await SalesforceLead.newButton();
-    await SalesforceLead.selectSalutation('Mr.');
-    await SalesforceLead.fillFirstName('John');
-    await SalesforceLead.fillLastName('Doe');
-    await SalesforceLead.fillCompany('Acme Corp');
+    await SalesforceLead.selectSalutation(salutation);
+    await SalesforceLead.fillFirstName(firstName);
+    await SalesforceLead.fillLastName(lastName);
+    await SalesforceLead.fillCompany(company);
     await SalesforceLead.saveButton();
 
-    await SalesforceLead.verifyLeadName('Mr. John Doe');
+    await SalesforceLead.verifyLeadName(fullName);
 });
