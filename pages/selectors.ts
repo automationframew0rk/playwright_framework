@@ -25,4 +25,17 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    "lead": {
+  "appLauncherBtn": "//button[@title='App Launcher']",
+  "appSearchInput": "//input[@placeholder='Search apps and items...']",
+  "appName": "(name) => `//p[@class='slds-truncate' and text()='${name}']`",
+  "newBtn": "//div[@title='New']",
+  "salutationDropdown": "//label[text()='Salutation']/following::div[contains(@class,'select')]",
+  "salutationOption": "(salutation) => `//lightning-base-combobox-item[@data-value='${salutation}']`",
+  "firstNameInput": "//input[@placeholder='First Name']",
+  "lastNameInput": "//input[@placeholder='Last Name']",
+  "companyInput": "//input[@placeholder='Company']",
+  "saveBtn": "//button[@title='Save']",
+  "leadName": "(fullName) => `//span[text()='${fullName}']"
+},
 };
