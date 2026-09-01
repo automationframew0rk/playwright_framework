@@ -25,4 +25,14 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    leads: {
+        newBtn: "//div[@title='New']",
+        salutationDropdown: "//button[@aria-label='Salutation']",
+        salutationOptionMr: "//lightning-base-combobox-item[@data-value='Mr.']",
+        firstNameInput: "//input[@name='firstName']",
+        lastNameInput: "//input[@name='lastName']",
+        companyInput: "//input[@name='Company']",
+        saveBtn: "//button[@name='SaveEdit']",
+        leadHeader: "//slot[@name='primaryField']//lightning-formatted-name"
+    },
 };
