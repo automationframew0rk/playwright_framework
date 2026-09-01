@@ -37,4 +37,14 @@ export const selectors = {
       annualMileageInput: "#annualmileage",
       nextButton: "#nextenterinsurantdata"
     },
+    lead: {
+      newBtn: "//button[@name='New']",
+      salutationDropdown: "//label[text()='Salutation']/following::button[1]",
+      salutationOption: (salutation: string) => `//lightning-base-combobox-item[@data-value='${salutation}']`,
+      firstNameInput: "//input[@name='firstName']",
+      lastNameInput: "//input[@name='lastName']",
+      companyInput: "//input[@name='Company']",
+      saveBtn: "//button[@name='SaveEdit']",
+      verificationText: (fullName: string) => `//span[text()='${fullName}']`
+    },
 };
