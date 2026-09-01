@@ -2,11 +2,13 @@ import { test as baseTest } from '@playwright/test';
 import { SalesforceAccountPage } from '../pages/salesforceAccountPage';
 import { SalesforceHomePage } from '../pages/salesforceHomePage';
 import { SalesforceLoginPage } from '../pages/salesforceLogin';
+import { AutomobileInsurancePage } from '../pages/automobileInsurancePage';
 
 type SalesforceFixtures = {
     SalesforceLogin: SalesforceLoginPage;
     SalesforceHome: SalesforceHomePage;
     SalesforceAccount: SalesforceAccountPage;
+    AutomobileInsurance: AutomobileInsurancePage;
 };
 
 export const test = baseTest.extend<SalesforceFixtures>({
@@ -20,5 +22,9 @@ export const test = baseTest.extend<SalesforceFixtures>({
 
     SalesforceAccount: async ({ page, context }, use) => {
         await use(new SalesforceAccountPage(page, context));
+    },
+
+    AutomobileInsurance: async ({ page, context }, use) => {
+        await use(new AutomobileInsurancePage(page, context));
     },
 });

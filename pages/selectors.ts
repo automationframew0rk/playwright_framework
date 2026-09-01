@@ -25,4 +25,16 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    automobileInsurance: {
+      automobileHeader: "text=Automobile",
+      makeDropdown: "#make",
+      enginePerformanceInput: "#engineperformance",
+      dateOfManufactureInput: "#dateofmanufacture",
+      numberOfSeatsDropdown: "#numberofseats",
+      fuelTypeDropdown: "#fuel",
+      listPriceInput: "#listprice",
+      licensePlateNumberInput: "#licenseplatenumber",
+      annualMileageInput: "#annualmileage",
+      nextButton: "#nextenterinsurantdata"
+    },
 };
