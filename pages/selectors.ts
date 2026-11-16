@@ -25,4 +25,16 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    tricentisVehicle: {
+        automobileHeader: "//a[text()='Automobile']",
+        makeDropdown: "//select[@name='Make']",
+        enginePerformanceInput: "//input[@name='[kW]']",
+        dateOfManufactureInput: "//input[@name='Date of Manufacture']",
+        numberOfSeatsDropdown: "//select[@name='Number of Seats']",
+        fuelTypeDropdown: "//select[@name='Fuel Type']",
+        listPriceInput: "//input[@name='List Price']",
+        licensePlateNumberInput: "//input[@name='License Plate Number']",
+        annualMileageInput: "//input[@name='Annual Mileage']",
+        nextButton: "//button[@name='Next (Enter Insurant Data)']"
+    },
 };
