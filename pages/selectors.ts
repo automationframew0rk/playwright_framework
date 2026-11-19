@@ -25,4 +25,13 @@ export const selectors = {
         confirmDeleteBtn: "//button[.//span[normalize-space()='Delete']]",
         toastMessage: "//span[contains(@class,'toastMessage')]",
     },
+    tricentisAutomobile: {
+        automobileHeader: "#nav_automobile",
+        makeDropdown: "select[name='Make']",
+        enginePerformanceInput: "input[name='[kW]']",
+        dateOfManufactureInput: "input[name='Date of Manufacture']",
+        numberOfSeatsDropdown: "select[name='Number of Seats']",
+        fuelTypeDropdown: "select[name='Fuel Type']",
+        listPriceInput: "input[name='List Price']"
+    },
 };
